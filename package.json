@@ -1,6 +1,7 @@
 {
-  "name": "mobile",
-  "version": "0.1.0",
+  "name": "d-campus-app",
+  "version": "1.0.0",
+  "description": "Retro-Dark Web & Mobile Workstation Suite for COER University ERP with Autonomous Zero-CAPTCHA Authentication",
   "private": true,
   "scripts": {
     "dev": "next dev",
