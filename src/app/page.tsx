@@ -9,6 +9,7 @@ import AttendanceView from '@/components/AttendanceView';
 import TimetableView from '@/components/TimetableView';
 import AssignmentsView from '@/components/AssignmentsView';
 import SettingsView from '@/components/SettingsView';
+import PwaInstallPrompt from '@/components/PwaInstallPrompt';
 import {
   StudentProfile,
   AttendanceData,
@@ -274,6 +275,9 @@ export default function Home() {
         onChangeTab={(tab) => setActiveTab(tab)}
         assignmentCount={activeAssignmentsCount}
       />
+
+      {/* Progressive Web App (PWA) A2HS Install Prompt */}
+      <PwaInstallPrompt />
     </div>
   );
 }
