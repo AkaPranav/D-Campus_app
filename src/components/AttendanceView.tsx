@@ -162,14 +162,6 @@ export default function AttendanceView({ data }: AttendanceViewProps) {
                 ACADEMIC PERFORMANCE COCKPIT // ERP LIVE AUDIT
               </span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <span className="retro-badge safe text-[9px]">
-                {safeSubjectsCount} SAFE
-              </span>
-              <span className="retro-badge danger text-[9px]">
-                {criticalSubjectsCount} CRITICAL
-              </span>
-            </div>
           </div>
 
           <div className="p-4 space-y-3.5 flex-1 flex flex-col justify-between">
