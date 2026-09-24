@@ -13,9 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "D-Campus Mobile | COER University Academic Hub",
-  description: "Unified Zero-CAPTCHA Neo-Brutalist Mobile Portal for Attendance, Timetable & Notes",
+  title: "D-Campus | COER University Academic Hub",
+  description: "Unified Zero-CAPTCHA Neo-Brutalist Mobile & Web Portal for Attendance, Timetable & Notes",
   manifest: "/manifest.json",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icons/icon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icons/icon-128.png", sizes: "128x128", type: "image/png" },
+    ],
+    apple: [
+      { url: "/icons/icon-128.png", sizes: "128x128", type: "image/png" },
+    ],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -41,10 +52,6 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <head>
-        <link rel="icon" href="/icons/icon-128.png" />
-        <link rel="apple-touch-icon" href="/icons/icon-128.png" />
-      </head>
       <body className="min-h-full flex flex-col bg-[#0b0f19] text-[#f3f4f6]">
         {children}
       </body>
