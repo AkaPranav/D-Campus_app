@@ -173,23 +173,22 @@ export default function AttendanceView({ data }: AttendanceViewProps) {
           </div>
 
           <div className="p-4 space-y-3.5 flex-1 flex flex-col justify-between">
-            {/* 4 Stat Inset Metrics */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 font-mono text-xs">
-              <div className="retro-inset p-2.5 text-center">
+            {/* 3 Stat Inset Metrics - Unified Safe & Bunk Card */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 font-mono text-xs">
+              <div className="retro-inset p-2.5 text-center flex flex-col justify-between">
                 <span className="text-[10px] text-[#64748b] block uppercase">TOTAL COURSES</span>
                 <span className="font-black text-base text-[#f8fafc]">{subjects.length}</span>
               </div>
-              <div className="retro-inset p-2.5 text-center">
-                <span className="text-[10px] text-[#64748b] block uppercase">SAFE (≥75%)</span>
-                <span className="font-black text-base text-[#10b981]">{safeSubjectsCount}</span>
+              <div className="retro-inset p-2.5 text-center flex flex-col justify-between">
+                <span className="text-[10px] text-[#64748b] block uppercase">SAFE &amp; BUNK MARGIN</span>
+                <div className="flex items-baseline justify-center gap-1.5 flex-wrap">
+                  <span className="font-black text-base text-[#10b981]">{safeSubjectsCount} Safe</span>
+                  <span className="text-[#fbbf24] text-[11px] font-bold">({bunkAllowance} Bunk buffer)</span>
+                </div>
               </div>
-              <div className="retro-inset p-2.5 text-center">
+              <div className="retro-inset p-2.5 text-center flex flex-col justify-between">
                 <span className="text-[10px] text-[#64748b] block uppercase">CRITICAL (&lt;75%)</span>
                 <span className="font-black text-base text-[#f43f5e]">{criticalSubjectsCount}</span>
-              </div>
-              <div className="retro-inset p-2.5 text-center">
-                <span className="text-[10px] text-[#64748b] block uppercase">BUNK MARGIN</span>
-                <span className="font-black text-base text-[#fbbf24]">{bunkAllowance} Safe</span>
               </div>
             </div>
 

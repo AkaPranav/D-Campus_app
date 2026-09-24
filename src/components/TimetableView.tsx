@@ -114,11 +114,6 @@ export default function TimetableView({ schedule }: TimetableViewProps) {
           <span className="font-black text-[#f8fafc] uppercase tracking-wider">
             [{selectedDay.toUpperCase()} SCHEDULE]
           </span>
-          {isSelectedDayToday && (
-            <span className="retro-badge safe text-[9px]">
-              CURRENT ACADEMIC DAY
-            </span>
-          )}
         </div>
         <span className="text-[#fbbf24] font-bold">
           {periods.length} SCHEDULED PERIODS

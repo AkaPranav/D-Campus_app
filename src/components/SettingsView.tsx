@@ -10,6 +10,7 @@ import {
   CheckCircle,
   Eye,
   EyeOff,
+  Smartphone,
 } from 'lucide-react';
 import { StudentProfile } from '@/lib/erpClient';
 import ChaiModal from './ChaiModal';
@@ -224,8 +225,22 @@ export default function SettingsView({ student, onLogout, lastSync }: SettingsVi
             </div>
           </div>
 
-          {/* Logout Action */}
+          {/* Install to Home Screen Action */}
           <div className="pt-1">
+            <button
+              onClick={() => {
+                sessionStorage.removeItem('dcampus_pwa_prompt_dismissed');
+                window.location.reload();
+              }}
+              className="w-full btn-retro btn-retro-cyan py-2 text-xs flex items-center justify-center gap-2"
+            >
+              <Smartphone size={13} />
+              <span>INSTALL TO HOME SCREEN (PWA)</span>
+            </button>
+          </div>
+
+          {/* Logout Action */}
+          <div className="pt-0.5">
             <button
               onClick={onLogout}
               className="w-full btn-retro py-2.5 text-xs text-[#f43f5e] border-[#f43f5e] hover:bg-[#f43f5e]/15 flex items-center justify-center gap-2"
